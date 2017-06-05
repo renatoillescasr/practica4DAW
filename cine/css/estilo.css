@@ -20,7 +20,8 @@ h1{
   font-family: 'Anton', serif;
 }
 h2{
-  margin: 10px 0;
+  width:98%;
+  margin: 10px auto;
   padding: 10px;
   border-radius: 15px 5px;
   border: 1px solid white;
