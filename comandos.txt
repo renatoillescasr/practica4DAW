@@ -23,4 +23,11 @@ GITHUB
 7 sincronizar nuestro escritorio remoto con el local
    $ git push origin master
  
+8. crear rama
+$ git branch gh-pages
 
+9 subir a la rama
+$ git branch
+
+10 actualizar la rana
+$ git push origin master gh-page
