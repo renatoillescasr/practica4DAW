@@ -48,7 +48,7 @@ h2:hover{
   -ms-transform: scale(1.03,1.03);
   -moz-transform: scale(1.03,1.03);
   -webkit-transform: scale(1.03,1.03);
-  transform: scale(1.03,1.03);
+  transform: scale(1.01,1.01);
 }
 h3{
   margin: 5px;
@@ -64,7 +64,6 @@ img{
   opacity: 0.5;
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
-
 footer{
   width: 100%;
   border-radius: 20px 10px;
