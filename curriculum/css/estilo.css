@@ -13,30 +13,40 @@ body{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#b5bdc8',GradientType=1 ); /* IE6-9 */
   /*font*/
   font-family: 'Sanchez', serif;
-  font-size: 10pt;
+  font-size: .8em;
   max-width: 1000px;
   width: 80%;
   margin: auto;
 }
-
 h1{
   margin: 40px 0;
   text-align: center;
 }
-
-
+.foto{
+  border-radius: 20px;
+  width: 80%;
+  display: block;
+  margin: 10px auto;
+}
+#names > .flex-container > figure{
+  width: 33.33%;
+  float: left;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+#names > section{
+  width: 66.66%;
+  float: right;
+}
 #principal h2{
   margin:10px;
 }
-
 #info h2{
   text-align: center;
 }
-
 h2:hover{
   color:#1331F3;
 }
-
 h3,i {
   margin: 0 20px;
 }
@@ -50,12 +60,10 @@ h3,i {
   margin: 5px 0;
   overflow: auto;
 }
-
 #principal, footer{
   padding: 0 10%;
   width: 100%;
 }
-
 footer{
   width: 80%;
   border-radius: 20px 10px;
@@ -64,19 +72,11 @@ footer{
   background-color: #000;
   color: #ffffff;
 }
-
-#principal section article figure{
-  height: auto;
-  margin:10px 0;
-  padding: 0 10px;
-}
-
 .image1{
   border-radius: 50%;
   border: 1px solid;
   width:170px;
 }
-
 img{
   -o-transform: scale(1,1);
   -ms-transform: scale(1,1);
@@ -89,7 +89,6 @@ img{
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-
 img:hover{
   position: relative;
   z-index: 999;
@@ -99,21 +98,14 @@ img:hover{
   -webkit-transform: scale(1.03,1.03);
   transform: scale(1.10,1.10);
 }
-
-#principal section article section ul{
+.contenido{
   list-style: none;
   margin: 0 10px;
 }
-
-#principal section article section ul li{
+.contenido li{
   margin: 10px 10px;
 }
-
-#names article, .university, .college, #abilities{
-  overflow: auto;
-}
-
-#principal #educational .university{
+#educational .col-12:nth-child(2){
   border-bottom: 3px solid;
   padding-bottom: 10px;
 }
@@ -121,16 +113,14 @@ img:hover{
 #abilities article{
   margin-bottom: 10px;
 }
-
-#abilities article section ul li span{
+#abilities .contenido li span{
   padding: 8px;
   color:#fff;
   background-color: blue;
   border-radius: 50%;
   padding: 10px;
 }
-
-#abilities article section ul li{
+#abilities .contenido li{
   box-shadow: 10px 10px 5px #888888;
   display: inline-block;
   padding: 10px 10px 10px 0;
@@ -138,18 +128,15 @@ img:hover{
   border-radius: 20px;
   margin-left: 5px;
 }
-
 [class*="col-"]{
   float:left;
   padding: 5px;
 }
-
 .row::after{
-    content: "";
-    clear: both;
-    display: block;
+  content: "";
+  clear: both;
+  display: block;
 }
-
 .col-1{width: 8.33%;}
 .col-2{width: 16.66%;}
 .col-3{width: 25%;}
@@ -166,11 +153,51 @@ img:hover{
 @media only screen and (max-width:800px) {
   /* For mobile phones: */
   [class*="col-"] {
-    width: 100%;
+    width: 48%;
   }
   .image1{
-    width: 40%;
-    position: relative;
-    left:70px;
+    width: 80%;
+    display: block;
+    margin:0 auto 10px;
+  }
+  #educational .col-12:nth-child(2){
+    border-bottom: none;
+  }
+  #names section{
+    width: 100%;
+  }
+  .foto{
+    display: block;
+    margin: 0 auto;
+  }
+  #names span{
+    display: none;
+  }
+  #names header{
+    text-align: center;
+  }
+  .flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  #educational .institucion span{
+    display: none;
+  }
+  #educational .contenido:nth-child(1n+0) span{
+    display: none;
+  }
+  #educational .contenido li:nth-child(1n+0){
+    display: inline;
+  }
+  #educational .contenido li::after{
+    content: ", ";
+  }
+  #educational .contenido li:last-child:after{
+    content: ".";
+  }
+  #educational .contenido{
+    padding: 5% 0;
   }
 }
