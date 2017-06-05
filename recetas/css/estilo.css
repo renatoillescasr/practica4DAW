@@ -49,6 +49,9 @@ a:link {
 #activo:hover{
 	text-decoration: none;
 }
+.recetas footer p{
+	color: #edc163;
+}
 .recetas{
 	width:99%;
 	border-radius: 10px;
